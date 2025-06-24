@@ -1,0 +1,222 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Helados Lilia</title>
+        <link rel="icon" type="image/png" href="imagen 1 (1).jpg">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            .header {
+                animation: slideDown 1s cubic-bezier(.77,0,.18,1) 0.2s both;
+            }
+            @keyframes slideDown {
+                from { opacity: 0; transform: translateY(-60px);}
+                to { opacity: 1; transform: translateY(0);}
+            }
+            .hero-flex img {
+                animation: fadeInLeft 1.2s cubic-bezier(.77,0,.18,1);
+            }
+            .hero-text {
+                animation: fadeInRight 1.2s cubic-bezier(.77,0,.18,1) 0.3s both;
+            }
+            @keyframes fadeInLeft {
+                from { opacity: 0; transform: translateX(-80px) scale(0.95);}
+                to { opacity: 1; transform: translateX(0) scale(1);}
+            }
+            @keyframes fadeInRight {
+                from { opacity: 0; transform: translateX(80px) scale(0.95);}
+                to { opacity: 1; transform: translateX(0) scale(1);}
+            }
+            .btn-principal {
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+            }
+            .btn-principal::after {
+                content: "";
+                position: absolute;
+                left: 50%; top: 50%;
+                width: 0; height: 0;
+                background: rgba(255,255,255,0.3);
+                border-radius: 100%;
+                transform: translate(-50%, -50%);
+                transition: width 0.4s, height 0.4s;
+                z-index: -1;
+            }
+            .btn-principal:hover::after {
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header de redes sociales -->
+        <header class="header-social">
+            <div class="container-social">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </header>
+        <!-- Header principal -->
+        <header class="header">
+            <div class="container">
+                <h1 class="logo"><img src="imagen 1 (1).jpg" alt="Logo Helados Lilia" width="120" height="120"></h1>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-flex">
+                    <img src="imagen 7.jpeg" alt="Helados Lilia" width="400" height="450">
+                    <div class="hero-text">
+                        <h2>Bienvenido a mi sitio web</h2>
+                        <p>Una pequeña empresa creada en el año 2019, comprometida con la necesidad de satisfacer las necesidades de nuestros clientes. Nos comprometemos en mantener altos estándares de calidad en los procesos de fabricación de nuestros productos. Helados artesanales, naturales y cremosos.</p>
+                        <a href="#servicios" class="btn-principal">Ver Servicios</a>
+                    </div>
+                </div>
+            </section>
+            <section class="services" id="servicios">
+                <h2 class="titulo-animado">Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="img-difuminada">
+                            <img src="imagen9.jpg" alt="Helado Artesanal" class="no-blur">
+                        </div>
+                        <h3>Helados Artesanales</h3>
+                        <p>Sabores únicos y naturales hechos con ingredientes frescos.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="img-difuminada">
+                            <img src="imagen8.jpg" alt="Torta Helada" class="no-blur">
+                        </div>
+                        <h3>Tortas Heladas</h3>
+                        <p>Perfectas para tus celebraciones y eventos especiales.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="img-difuminada">
+                            <img src="imagen 1 (1).jpg" alt="Emprende con nosotros" class="no-blur">
+                        </div>
+                        <h3>Emprende con nosotros.</h3>
+                        <p>Servicio personalizado para tus emprendimientos.</p>
+                    </div>
+                </div>
+            </section>
+            <aside class="hero-aside noticias-aside">
+
+                <div class="noticias-flex">
+                    <img src="imagen5.jpeg" alt="Helado artesanal" class="noticias-img">
+                    <div class="noticias-texto">
+                        <h2>Noticias Recientes</h2>
+                        <p>
+                            Noticias Recientes
+                            Nuevo sabor de helado: Fresa.<br>
+                            Promociones especiales este mes: 2x1 en helados.<br>
+                            ¡Participa en nuestro sorteo!
+                        </p>
+                    </div>
+                </div>
+            </aside>
+            <div class="asides-flex">
+                <aside class="sidebar">
+                    <h2>Testimonios</h2>
+                    <ul>
+                        <li>"¡Los helados son deliciosos y naturales!" - Ana</li>
+                        <li>"Excelente atención y productos de calidad." - Luis</li>
+                        <li>"Las tortas heladas fueron el éxito de mi fiesta." - Marta</li>
+                    </ul>
+                </aside>
+                <aside class="sidebar">
+                    <h2>Preguntas Frecuentes</h2>
+                    <ul>
+                        <li>¿Dónde están ubicados?</li>
+                        <li>¿Hacen envíos a domicilio?</li>
+                        <li>¿Tienen opciones sin azúcar?</li>
+                        <li>¿Cómo puedo hacer un pedido especial?</li>
+                        <li>
+                            <a href="https://wa.me/584120452490" target="_blank" style="color:#25D366; text-decoration:none; display:flex; align-items:center; gap:8px;">
+                                <i class="fab fa-whatsapp"></i> 0412 0452490
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <section id="contacto" class="contacto-section sidebar">
+                <h2>Contacto</h2>
+                <p>Puedes escribirnos a nuestro WhatsApp:</p>
+                <a href="https://wa.me/584120452490" target="_blank" style="color:#25D366; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+                    <i class="fab fa-whatsapp"></i> 0412 0452490
+                </a>
+            </section>
+            <section id="sobre-nosotros" class="sidebar">
+                <h2>Sobre Nosotros</h2>
+                <p>
+                    Somos Helados Lilia, una empresa fundada en 2019 dedicada a ofrecer productos artesanales de alta calidad. Nuestro compromiso es satisfacer las necesidades de nuestros clientes con helados naturales, cremosos y deliciosos, elaborados bajo los más altos estándares.
+                </p>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <ul class="footer-links">
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+                <p>&copy; 2025 Página de Prueba. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+        <!-- Agrega esto antes de </body> -->
+        <script>
+        let lastScroll = 0;
+        const headerSocial = document.querySelector('.header-social');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 50) {
+                // Oculta al bajar
+                headerSocial.style.transform = 'translateY(-100%)';
+            } else {
+                // Muestra al subir
+                headerSocial.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
+        });
+        </script>
+        <script>
+    document.querySelectorAll('a[href^="#"]').forEach(enlace => {
+        enlace.addEventListener('click', function(e) {
+            const destino = document.querySelector(this.getAttribute('href'));
+            if(destino) {
+                e.preventDefault();
+                const offset = 90; // Ajusta según la altura de tu header
+                const top = destino.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    });
+    </script>
+    </body>
+    </html>
+
+
+
